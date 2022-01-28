@@ -1,7 +1,8 @@
 const express = require("express");
+const http = require("http");
 const app = express();
+const server = http.createServer(app);
 const MenRanking = require("./src/models/mens");
-const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
@@ -74,6 +75,9 @@ app.delete("/api/:id", async (req, res) => {
     res.send(error);
   }
 });
+
+
+const port = process.env.PORT || 3000; 
 
 app.listen(port, () =>
   console.log(`Example app listening on port http://localhost:${port}`)

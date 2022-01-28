@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const MenRanking = require("./src/models/mens");
-const port = process.env.Port || 3000;
+const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
